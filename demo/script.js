@@ -54,7 +54,8 @@ function main(Liricle) {
         }
     });
 
-    $player_audio.src = "https://raw.githubusercontent.com/mcanam/assets/main/liricle-demo/audio.mp3";
+    // $player_audio.src = "https://raw.githubusercontent.com/mcanam/assets/main/liricle-demo/audio.mp3";
+    $player_audio.src = "../resources/Schubert.mp3";
 
     $player_audio.addEventListener("canplaythrough", () => {
         const duration = $player_audio.duration;
@@ -143,8 +144,11 @@ function main(Liricle) {
     let $lines = [];
     let $activeLine = null;
 
+    // liricle.load({
+    //     url: "https://raw.githubusercontent.com/mcanam/assets/main/liricle-demo/lyric-enhanced.lrc"
+    // });
     liricle.load({
-        url: "https://raw.githubusercontent.com/mcanam/assets/main/liricle-demo/lyric-enhanced.lrc"
+        url: "../resources/Schubert.lrc"
     });
 
     liricle.on("load", ({ tags, lines, enhanced }) => {
